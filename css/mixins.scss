@@ -1,0 +1,102 @@
+//手机移动响应
+@mixin device-size($size){
+  $device-size-list:$size,640px,600px,435px,414px,413px,412px,411px,400px,385px,384px,375px,360px,320px;
+  @each $i in $device-size-list{
+    @media screen and(max-width:#{$i}) {
+      html{
+        font-size: 100px*$i/$size;
+      }
+    }
+  }
+}
+
+//全屏
+@mixin fullScreen{
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom:0;
+  margin:0;
+}
+%FullScreen{
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom:0;
+  margin: auto;
+}
+//定位+移动居中
+@mixin middle(){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%,-50%,0);
+}
+//正方形
+@mixin square1($size){
+  width: $size;
+  height: $size;
+}
+@mixin square2($size,$bg){
+  width: $size;
+  height: $size;
+  background: $bg;
+}
+@mixin square3($w,$h,$bg){
+  display: block;
+  width: $w;
+  height: $h;
+  background: $bg;
+}
+//圆
+@mixin circle($size,$bg){
+  width: $size;
+  height: $size;
+  background: $bg;
+  border-radius: $size/2;
+}
+
+//按钮
+@mixin btn($w,$h,$bg){
+  width:$w;
+  height:$h;
+  background:$bg;
+  color: #fff;
+  text-align: center;
+  border-radius:$h/2;
+  line-height: $h;
+  box-sizing: border-box;
+}
+
+/*背景图片-尺寸100%    参数没有$h时为正方形*/
+@mixin bgImg3($w,$h,$url){
+  width:$w;
+  height:$h;
+  background: url($url) center center no-repeat;
+  background-size: 100% 100%;
+}
+@mixin bgImg2($w,$url){
+  width:$w;
+  height:$w;
+  background: url($url) center center no-repeat;
+  background-size: 100% 100%;
+}
+@mixin bgImg1($url){
+  background: url($url) center center no-repeat;
+  background-size: 100% 100%;
+}
+
+/*三角形*/
+@mixin triangle($w,$h,$borderColor){
+  display: block;
+  width:0;
+  height:0;
+  border-left:$w/2 solid $borderColor;
+  border-right:$w/2 solid $borderColor;
+  border-top:$h/2 solid $borderColor;
+  border-bottom:$h/2 solid $borderColor;
+}
+
+

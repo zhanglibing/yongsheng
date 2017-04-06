@@ -1,0 +1,896 @@
+@charset "UTF-8";
+/*背景图片-尺寸100%    参数没有$h时为正方形*/
+/*三角形*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+}
+
+ul, li, h1, h2, h3, h4, h5, h6 {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #f5f5f5;
+  font-family: "微软雅黑";
+}
+
+@font-face {
+  font-family: eng;
+  src: url("../font/gillsans.ttf");
+}
+
+.d-1 {
+  width: 8.33333%;
+}
+
+.d-2 {
+  width: 16.66667%;
+}
+
+.d-3 {
+  width: 25%;
+}
+
+.d-4 {
+  width: 33.33333%;
+}
+
+.d-5 {
+  width: 41.66667%;
+}
+
+.d-6 {
+  width: 50%;
+}
+
+.d-7 {
+  width: 58.33333%;
+}
+
+.d-8 {
+  width: 66.66667%;
+}
+
+.d-9 {
+  width: 75%;
+}
+
+.d-10 {
+  width: 83.33333%;
+}
+
+.d-11 {
+  width: 91.66667%;
+}
+
+.d-12 {
+  width: 100%;
+}
+
+.nav-wrapper .blank {
+  width: 100%;
+  height: 88px;
+}
+
+.nav-wrapper .nav-box {
+  height: 50px;
+  background: #000;
+}
+
+.nav-wrapper .nav-box .nav-content {
+  width: 1200px;
+  height: 100%;
+  background: #f5f5f5;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav-wrapper .nav-box .nav-content .left {
+  width: 100px;
+  height: 100%;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  background: #000;
+}
+
+.nav-wrapper .nav-box .nav-content .icon {
+  width: 180px;
+  height: 100px;
+  background: url("../images/icon.png") center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: -25px;
+  left: 120px;
+}
+
+.nav-wrapper .nav-box .nav-content .right {
+  width: 880px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #000;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.nav-wrapper .nav-box .nav-content .right .img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #c66a25;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.nav-wrapper .nav-box .nav-content .right .img img {
+  position: absolute;
+  top: 12px;
+  left: 13px;
+}
+
+.nav-wrapper .nav-box .nav-content .right .nav {
+  width: 560px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  background: transparent;
+}
+
+.nav-wrapper .nav-box .nav-content .right .nav li {
+  float: left;
+  width: 112px;
+  padding: 16px 0 18px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-wrapper .nav-box .nav-content .right .nav li b {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 6px;
+  left: 53px;
+  background: transparent;
+}
+
+.nav-wrapper .nav-box .nav-content .right .nav li.active {
+  color: #c66a25;
+}
+
+.nav-wrapper .nav-box .nav-content .right .nav li.active b {
+  background: #c66a25;
+}
+
+.nav-wrapper .nav-box .nav-content .right .music-wrapper {
+  width: 134px;
+  height: 96px;
+  position: absolute;
+  top: -23px;
+  right: 20px;
+}
+
+.nav-wrapper .nav-box .nav-content .right .music-wrapper .music-box {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: #c66a25;
+  border: 5px solid #c66a25;
+}
+
+.nav-wrapper .nav-box .nav-content .right .music-wrapper .music-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-wrapper .nav-box .nav-content .right .music-wrapper .music-box .volume {
+  width: 38px;
+  height: 32px;
+  background: url("../images/volume.png");
+  position: absolute;
+  top: 32px;
+  left: 29px;
+  cursor: pointer;
+}
+
+.nav-wrapper .nav-box .nav-content .right .music-wrapper .music-tiao {
+  width: 84px;
+  height: 37px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  background: url("../images/music-tiao.png") center no-repeat;
+}
+
+.main-wrapper {
+  width: 1200px;
+  height: 614px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-wrapper .bottom {
+  width: 506px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  left: -79px;
+  background: #505050;
+}
+
+.main-wrapper .bottom b {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 53px solid transparent;
+  border-right: 53px solid transparent;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left-color: #f5f5f5;
+  border-top-color: #f5f5f5;
+}
+
+.main-wrapper .bottom b.left {
+  float: left;
+}
+
+.main-wrapper .bottom b.right {
+  float: right;
+  border-left-color: transparent;
+  border-right-color: #f5f5f5;
+}
+
+.main-wrapper .bottom .avatar {
+  width: 150px;
+  height: 540px;
+  background: url("../images/avatar.png") center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -75px;
+}
+
+.main-wrapper .main-content {
+  width: 654px;
+  height: 281px;
+  background: url("../images/main_1.png") center center no-repeat;
+  background-size: 100% 100%;
+  margin-left: 484px;
+  position: absolute;
+  top: 50%;
+  margin-top: -140px;
+}
+
+.main2-wrapper {
+  width: 100%;
+  background: #000;
+}
+
+.main2-wrapper .content {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main2-wrapper .content .top {
+  width: 100%;
+  height: 32px;
+  padding: 38px 0 30px;
+  position: relative;
+}
+
+.main2-wrapper .content .top .left {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  position: relative;
+}
+
+.main2-wrapper .content .top .left b {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-top-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+.main2-wrapper .content .top .right {
+  width: 70px;
+  line-height: 32px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+}
+
+.main2-wrapper .content .xinxi {
+  width: 397px;
+  height: 176px;
+  background: url("../images/xinxi.png") center center no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  margin-bottom: 90px;
+}
+
+.main2-wrapper .content ul {
+  width: 100%;
+  height: 200px;
+}
+
+.main2-wrapper .content ul li {
+  box-sizing: border-box;
+  width: 25%;
+  height: 100%;
+  float: left;
+  transition: transform 0.2s ease;
+}
+
+.main2-wrapper .content ul li:nth-child(1) {
+  background: url("../images/1.png") center no-repeat;
+}
+
+.main2-wrapper .content ul li:nth-child(2) {
+  background: url("../images/2.png") center no-repeat;
+}
+
+.main2-wrapper .content ul li:nth-child(3) {
+  background: url("../images/3.png") center no-repeat;
+}
+
+.main2-wrapper .content ul li:nth-child(4) {
+  background: url("../images/4.png") center no-repeat;
+}
+
+.main2-wrapper .content ul li.active {
+  border: 1px solid #fff;
+  transform: translate3d(0, -24px, 0);
+}
+
+.main2-wrapper .content ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: #ffa35e;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 200px;
+  transition: all 0.4s ease;
+}
+
+.main2-wrapper .content ul li a.active {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.main3-wrapper {
+  width: 1200px;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+
+.main3-wrapper .xinxi {
+  margin: 0 auto 15px;
+  width: 397px;
+  height: 100px;
+  background: url("../images/xinxi2.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+
+.main3-wrapper .xinxi.xinxi1 {
+  background: url("../images/xinxi2_2.png") center no-repeat;
+}
+
+.main3-wrapper .map {
+  width: 1020px;
+  height: 773px;
+  background: url("../images/map.png") center center no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto 25px;
+  position: relative;
+}
+
+.main3-wrapper .map .title {
+  width: 340px;
+  height: 75px;
+  position: absolute;
+  top: 285px;
+  right: 330px;
+  line-height: 26px;
+  font-size: 18px;
+}
+
+.main3-wrapper .map .title span {
+  display: inline-block;
+}
+
+.main3-wrapper .map .title .time {
+  padding-right: 6px;
+  border-right: 1px solid #c66a25;
+}
+
+.main3-wrapper .map .title .dian {
+  width: 5px;
+  height: 5px;
+  background: #000;
+  border-radius: 2.5px;
+  margin: 0 6px;
+  vertical-align: middle;
+}
+
+.main3-wrapper .map .title .address {
+  display: inline-block;
+  position: relative;
+  padding-left: 6px;
+}
+
+.main3-wrapper .map .title .line {
+  display: block;
+  width: 210px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  bottom: -1px;
+  left: 5px;
+}
+
+.main3-wrapper .map .title .jobs {
+  position: absolute;
+  top: 28px;
+  right: 68px;
+}
+
+.main3-wrapper .map .title .position {
+  width: 23px;
+  height: 31px;
+  background: url("../images/position.png") center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  animation: map 1.5s infinite ease;
+}
+
+.main3-wrapper .map .title .point {
+  width: 15px;
+  height: 5px;
+  background: url("../images/point.png") center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 0;
+  right: 3px;
+}
+
+.main3-wrapper .map .title.t2 {
+  width: 370px;
+  top: 400px;
+  right: 140px;
+}
+
+.main3-wrapper .map .title.t2 .jobs {
+  right: 50px;
+}
+
+.main3-wrapper .map .title.t2 .line {
+  width: 265px;
+}
+
+.main5-wrapper {
+  width: 1200px;
+  padding-top: 420px;
+  margin: 0 auto;
+  position: relative;
+  background: url("../images/bg-circle.png") center 20px no-repeat;
+  margin-bottom: 80px;
+}
+
+.main5-wrapper .dash-box {
+  width: 1330px;
+  height: 440px;
+  border-left: 1px dashed #000;
+  border-right: 1px dashed #000;
+  position: relative;
+  left: -65px;
+}
+
+.main5-wrapper .dash-box > span {
+  display: block;
+  height: 0;
+  width: 428px;
+  border-top: 1px dashed #000;
+  position: absolute;
+  top: -1px;
+}
+
+.main5-wrapper .dash-box > span.left {
+  left: 0;
+}
+
+.main5-wrapper .dash-box > span.right {
+  right: 0;
+}
+
+.main5-wrapper .dash-box .student {
+  width: 392px;
+  height: 179px;
+  background: url("../images/student.png") center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  margin-left: -196px;
+}
+
+.main5-wrapper .dash-box .jiantou {
+  display: block;
+  width: 1px;
+  height: 175px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.main5-wrapper .dash-box .jiantou .sanjiao {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-top-color: #000;
+  position: absolute;
+  bottom: -14px;
+  left: -9px;
+}
+
+.main5-wrapper .top {
+  width: 1330px;
+  height: 34px;
+  margin-left: -65px;
+  background: #000;
+}
+
+.main5-wrapper .top b {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 33px solid transparent;
+  border-right: 33px solid transparent;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+}
+
+.main5-wrapper .top b.left {
+  float: left;
+  border-bottom-color: #f5f5f5;
+  border-left-color: #f5f5f5;
+}
+
+.main5-wrapper .top b.right {
+  float: right;
+  border-bottom-color: #f5f5f5;
+  border-right-color: #f5f5f5;
+}
+
+.main5-wrapper .link {
+  height: 600px;
+}
+
+.main5-wrapper .link li {
+  float: left;
+  height: 300px;
+  position: relative;
+  background: url("../images/n3.png") center no-repeat;
+}
+
+.main5-wrapper .link li:nth-child(5) {
+  background: url("../images/n5.png") center no-repeat;
+}
+
+.main5-wrapper .link li .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: all 0.2s linear;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+.main5-wrapper .link li .mask.p1 p {
+  width: 100%;
+  line-height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.main5-wrapper .link li .mask.p2 .content {
+  box-sizing: border-box;
+  padding: 70px 35px 40px 20px;
+  text-align: left;
+}
+
+.main5-wrapper .link li .mask.p2 .content .title {
+  font-size: 24px;
+}
+
+.main5-wrapper .link li .mask.p2 .content .title2 {
+  font-size: 18px;
+}
+
+.main5-wrapper .link li .mask.p2 .content .title3 {
+  padding: 30px 0;
+  font-size: 12px;
+}
+
+.main5-wrapper .link li .mask.p2 .content .title4 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.main5-wrapper .link li .mask.p2 .content .title5 {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: eng;
+}
+
+.main5-wrapper .link li .mask.p5 p {
+  width: 100%;
+  padding: 0 30px;
+  line-height: 40px;
+  color: #000;
+  font-size: 20px;
+  font-family: eng;
+  box-sizing: border-box;
+  text-align: left;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.main5-wrapper .link li:hover .mask {
+  opacity: 1;
+}
+
+.main5-wrapper .link li.more-box {
+  background: none;
+}
+
+.main5-wrapper .link li.more-box .more {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.main6-wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.main6-wrapper .top-wrapper {
+  display: block;
+  width: 634px;
+  height: 44px;
+  background: transparent;
+  margin: 0 auto;
+}
+
+.main6-wrapper .top-wrapper b {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 317px solid transparent;
+  border-right: 317px solid transparent;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  border-bottom-color: #000;
+}
+
+.main6-wrapper .bg_box {
+  width: 100%;
+  height: 320px;
+  padding-top: 140px;
+  box-sizing: border-box;
+  background: url("../images/main6-bg.png") center no-repeat;
+  color: #fff;
+  text-align: center;
+}
+
+.main6-wrapper .bg_box .ch {
+  font-size: 28px;
+  line-height: 46px;
+}
+
+.main6-wrapper .bg_box .en {
+  font-family: eng;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.main6-wrapper .title {
+  display: block;
+  width: 500px;
+  height: 60px;
+  background: #000;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  position: relative;
+}
+
+.main6-wrapper .title b {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  position: absolute;
+  bottom: 0;
+  border-top-color: #676767;
+}
+
+.main6-wrapper .title b.left {
+  left: -8px;
+  border-right-color: #676767;
+}
+
+.main6-wrapper .title b.right {
+  right: -8px;
+  border-left-color: #676767;
+}
+
+.main6-wrapper .kuang {
+  width: 630px;
+  height: 300px;
+  border: 1px solid #000;
+  border-bottom-color: transparent;
+  margin: -8px auto 80px;
+  position: relative;
+}
+
+.main6-wrapper .kuang > span {
+  display: block;
+  width: 215px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  bottom: -1px;
+}
+
+.main6-wrapper .kuang > span.left-line {
+  left: 0;
+}
+
+.main6-wrapper .kuang > span.right-line {
+  right: 0;
+}
+
+.main6-wrapper .kuang .weichat-wrapper {
+  width: 115px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 60px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.main6-wrapper .kuang .weichat-wrapper .weichat {
+  width: 115px;
+  height: 115px;
+  background: url("../images/weichat.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+
+.main6-wrapper .kuang .icon {
+  width: 162px;
+  height: 94px;
+  background: url("../images/icon.png") center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: -47px;
+  left: 50%;
+  margin-left: -81px;
+}
+
+/*底部*/
+.footer-wrapper {
+  width: 100%;
+  background: #000;
+}
+
+.footer-wrapper .footer {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 114px 0 104px 0;
+}
+
+.footer-wrapper .footer .split {
+  width: 60px;
+  height: 4px;
+  background: #fff;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.footer-wrapper .footer p {
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.more {
+  width: 154px;
+  height: 34px;
+  margin: 0 auto 100px;
+  border: 1px solid #fff;
+  background: #000;
+  color: #fff;
+  line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.more:hover {
+  border-color: #000;
+  background: #fff;
+  color: #000;
+}
+
+@keyframes map {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
