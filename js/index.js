@@ -3,15 +3,30 @@ $(function(){
         $('.nav li').removeClass('active')
         $(this).addClass('active');
     })
+    var audio = $("audio").get(0);
+    $('.nav-content .right .img').on('click',function(){
+        $(this).toggleClass('active');
+        if(audio.paused){
+            audio.play();
+        }else{
+            audio.pause();
+        }
 
-    $('.main2-wrapper ul li').bind({
+    })
+
+    $('.main2-wrapper .link li').bind({
         mouseover:function(){
+            var index=$(this).index();
             $(this).addClass('active');
-            $(this).find('a').addClass('active')
+            $(this).find('a').addClass('active');
+            $('.xinxi img').addClass("active");
+            $('.xinxi li').eq(index).addClass('active');
         },
         mouseout:function(){
             $(this).removeClass('active');
             $(this).find('a').removeClass('active');
+            $('.xinxi img').removeClass("active");
+            $('.xinxi ul li').removeClass("active");
         }
     })
 

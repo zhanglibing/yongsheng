@@ -131,6 +131,7 @@ body {
   position: absolute;
   top: 8px;
   left: 8px;
+  cursor: pointer;
 }
 
 .nav-wrapper .nav-box .nav-content .right .img img {
@@ -330,18 +331,69 @@ body {
 .main2-wrapper .content .xinxi {
   width: 397px;
   height: 176px;
-  background: url("../images/defaut.png") center center no-repeat;
-  background-size: 100% 100%;
   margin: 0 auto;
   margin-bottom: 90px;
+  position: relative;
 }
 
-.main2-wrapper .content ul {
+.main2-wrapper .content .xinxi img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 1;
+}
+
+.main2-wrapper .content .xinxi img.active {
+  opacity: 0;
+}
+
+.main2-wrapper .content .xinxi ul {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main2-wrapper .content .xinxi ul li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.main2-wrapper .content .xinxi ul li:nth-child(1) {
+  background: url("../images/one.png") center no-repeat;
+}
+
+.main2-wrapper .content .xinxi ul li:nth-child(2) {
+  background: url("../images/two.png") center no-repeat;
+}
+
+.main2-wrapper .content .xinxi ul li:nth-child(3) {
+  background: url("../images/three.png") center no-repeat;
+  height: 280px;
+  top: -50px;
+}
+
+.main2-wrapper .content .xinxi ul li:nth-child(4) {
+  height: 190px;
+  background: url("../images/four.png") center no-repeat;
+}
+
+.main2-wrapper .content .xinxi ul li.active {
+  opacity: 1;
+}
+
+.main2-wrapper .content ul.link {
   width: 100%;
   height: 200px;
 }
 
-.main2-wrapper .content ul li {
+.main2-wrapper .content ul.link li {
   box-sizing: border-box;
   width: 25%;
   height: 100%;
@@ -349,28 +401,28 @@ body {
   transition: transform 0.2s ease;
 }
 
-.main2-wrapper .content ul li:nth-child(1) {
+.main2-wrapper .content ul.link li:nth-child(1) {
   background: url("../images/1.png") center no-repeat;
 }
 
-.main2-wrapper .content ul li:nth-child(2) {
+.main2-wrapper .content ul.link li:nth-child(2) {
   background: url("../images/2.png") center no-repeat;
 }
 
-.main2-wrapper .content ul li:nth-child(3) {
+.main2-wrapper .content ul.link li:nth-child(3) {
   background: url("../images/3.png") center no-repeat;
 }
 
-.main2-wrapper .content ul li:nth-child(4) {
+.main2-wrapper .content ul.link li:nth-child(4) {
   background: url("../images/4.png") center no-repeat;
 }
 
-.main2-wrapper .content ul li.active {
+.main2-wrapper .content ul.link li.active {
   border: 2px solid #fff;
   transform: translate3d(0, -24px, 0);
 }
 
-.main2-wrapper .content ul li a {
+.main2-wrapper .content ul.link li a {
   display: block;
   width: 100%;
   height: 100%;
@@ -383,7 +435,7 @@ body {
   transition: all 0.4s ease;
 }
 
-.main2-wrapper .content ul li a.active {
+.main2-wrapper .content ul.link li a.active {
   background: rgba(0, 0, 0, 0.85);
 }
 
