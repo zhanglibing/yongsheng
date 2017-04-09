@@ -80,6 +80,30 @@ body{
             position: absolute;
             top: 12px;
             left: 13px;
+            display: block;
+          }
+          .play{
+            width:11px;
+            height:12px;
+            @include middle;
+            display: none;
+            span{
+              display: block;
+              @include square3(4px,12px,#000);
+              float: left;
+              margin-right:3px;
+              &:last-child{
+                margin-right:0;
+              }
+            }
+          }
+          &.active{
+            img{
+              display: none;
+            }
+            .play{
+              display: block;
+            }
           }
         }
         .nav{
@@ -125,11 +149,15 @@ body{
             width: 86px;
             height:86px;
             border-radius: 50%;
-            background: $themeColor;
+            background:#000;
             border:5px solid $themeColor;
             img{
               width:100%;
               height:100%;
+              &.active{
+                animation: music 3s infinite linear;
+              }
+
             }
             .volume{
               width:38px;
@@ -718,6 +746,7 @@ body{
     text-align: center;
     line-height: 60px;
     position: relative;
+    z-index: 2;
     b{
       @include triangle(8px,8px,transparent);
       position:absolute;
@@ -753,14 +782,16 @@ body{
       }
     }
     .weichat-wrapper{
-      width:115px;
-      height:auto;
-      margin:0 auto;
-      padding-top:60px;
+      width: 516px;
+      height:176px;
+      margin: 0 auto;
+      padding-top: 60px;
       line-height: 30px;
       text-align: center;
+      background: #fff;
       .weichat{
         @include bgImg2(115px,"../images/weichat.png");
+        margin:0 auto;
       }
 
     }
@@ -829,4 +860,8 @@ body{
   50%{transform:translateY(0px);}
   75%{transform:translateY(-3px);}
   100%{transform:translateY(0px);}
+}
+@keyframes music{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
 }

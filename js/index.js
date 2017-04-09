@@ -8,8 +8,10 @@ $(function(){
         $(this).toggleClass('active');
         if(audio.paused){
             audio.play();
+            $('.music-box img').addClass('active');
         }else{
             audio.pause();
+            $('.music-box img').removeClass('active');
         }
 
     })
