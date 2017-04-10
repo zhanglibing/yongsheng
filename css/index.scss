@@ -643,8 +643,37 @@ body{
         background: url("../images/n4.png") center no-repeat;
         background-size: 100% 100%;
       }
+      &:nth-child(6){
+        background: url("../images/n6.png") center no-repeat;
+        background-size: 100% 100%;
+      }
       &:nth-child(2){
         background: #000;
+      }
+      .p2 .content{
+        box-sizing: border-box;
+        padding:70px 35px 40px 20px;
+        text-align: left;
+        color:#fff;
+        .title{
+          font-size: 24px;
+        }
+        .title2{
+          font-size: 18px;
+        }
+        .title3{
+          padding:30px 0;
+          font-size: 12px;
+        }
+        .title4{
+          font-size: 14px;
+          line-height: 20px;
+        }
+        .title5{
+          font-size: 14px;
+          line-height: 18px;
+          font-family: eng;
+        }
       }
       .mask{
         @include fullScreen();
@@ -659,30 +688,7 @@ body{
           line-height: 40px;
           @include middle;
         }
-        &.p2 .content{
-          box-sizing: border-box;
-          padding:70px 35px 40px 20px;
-          text-align: left;
-          .title{
-            font-size: 24px;
-          }
-          .title2{
-            font-size: 18px;
-          }
-          .title3{
-            padding:30px 0;
-            font-size: 12px;
-          }
-          .title4{
-            font-size: 14px;
-            line-height: 20px;
-          }
-          .title5{
-            font-size: 14px;
-            line-height: 18px;
-            font-family: eng;
-          }
-        }
+
         &.p5 p{
           width:100%;
           padding:0 30px;

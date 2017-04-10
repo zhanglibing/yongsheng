@@ -858,8 +858,44 @@ body {
   background-size: 100% 100%;
 }
 
+.main5-wrapper .link li:nth-child(6) {
+  background: url("../images/n6.png") center no-repeat;
+  background-size: 100% 100%;
+}
+
 .main5-wrapper .link li:nth-child(2) {
   background: #000;
+}
+
+.main5-wrapper .link li .p2 .content {
+  box-sizing: border-box;
+  padding: 70px 35px 40px 20px;
+  text-align: left;
+  color: #fff;
+}
+
+.main5-wrapper .link li .p2 .content .title {
+  font-size: 24px;
+}
+
+.main5-wrapper .link li .p2 .content .title2 {
+  font-size: 18px;
+}
+
+.main5-wrapper .link li .p2 .content .title3 {
+  padding: 30px 0;
+  font-size: 12px;
+}
+
+.main5-wrapper .link li .p2 .content .title4 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.main5-wrapper .link li .p2 .content .title5 {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: eng;
 }
 
 .main5-wrapper .link li .mask {
@@ -884,36 +920,6 @@ body {
   left: 50%;
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
-}
-
-.main5-wrapper .link li .mask.p2 .content {
-  box-sizing: border-box;
-  padding: 70px 35px 40px 20px;
-  text-align: left;
-}
-
-.main5-wrapper .link li .mask.p2 .content .title {
-  font-size: 24px;
-}
-
-.main5-wrapper .link li .mask.p2 .content .title2 {
-  font-size: 18px;
-}
-
-.main5-wrapper .link li .mask.p2 .content .title3 {
-  padding: 30px 0;
-  font-size: 12px;
-}
-
-.main5-wrapper .link li .mask.p2 .content .title4 {
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.main5-wrapper .link li .mask.p2 .content .title5 {
-  font-size: 14px;
-  line-height: 18px;
-  font-family: eng;
 }
 
 .main5-wrapper .link li .mask.p5 p {
