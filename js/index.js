@@ -1,9 +1,5 @@
 $(function(){
-    $('.nav li').on('click',function(){
-        $('.nav li').removeClass('active')
-        $(this).addClass('active');
-    })
-    
+
     var audio = $("audio").get(0);
     $('.nav-content .right .img').on('click',function(){
         $(this).toggleClass('active');
@@ -16,6 +12,45 @@ $(function(){
         }
 
     })
+
+    //楼层跳转
+
+    // $('.floor').each(function(i,v){
+    //     var h=$(this).offsetTop;
+    //     floorArr.push(h);
+    // })
+    // $(window).on('scroll',function(){
+    //     var stop=$(window).scrollTop;
+    //     if()
+    // })
+    var floorArr=[];
+    var floor=$('.floor');
+    var link=$('.nav li');
+    $(window).on('resize',function(){
+        $(window).scroll();
+    })
+    floor.each(function(i,v){
+        var h=$(this).offset().top;
+        floorArr.push(h);
+    })
+    $(window).on('scroll',function(){
+        var stop=$(window).scrollTop();
+        $(floorArr).each(function(i,v){
+            if(stop>=v-255){
+                link.eq(i).addClass('active')
+            }
+            else if(stop<v+50){
+                link.eq(i).removeClass('active')
+            }
+        });
+
+    })
+    link.on('click',function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        $('body').animate({scrollTop:floorArr[$(this).index()]},1000)
+    })
+  
+
 
     $('.main2-wrapper .link li').bind({
         mouseover:function(){

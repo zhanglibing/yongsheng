@@ -699,6 +699,7 @@ body {
 
 .main4-wrapper .contain ul.project li.active {
   color: #c66a25;
+  box-shadow: 2px 2px 4px #bdbaba,-2px -2px 4px #bdbaba,2px -2px 4px #bdbaba ,-2px 2px 4px #bdbaba;
 }
 
 .main4-wrapper .contain ul.project li.active .title {
@@ -865,6 +866,20 @@ body {
 
 .main5-wrapper .link li:nth-child(2) {
   background: #000;
+}
+
+.main5-wrapper .link li b {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 21px solid transparent;
+  border-right: 21px solid transparent;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right-color: #000;
 }
 
 .main5-wrapper .link li .p2 .content {

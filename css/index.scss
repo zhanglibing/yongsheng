@@ -522,6 +522,7 @@ body{
           }
           &.active{
              color:$themeColor;
+            box-shadow:2px 2px 4px #bdbaba,-2px -2px 4px #bdbaba,2px -2px 4px #bdbaba ,-2px 2px 4px #bdbaba ;
             .title{
               border-color:$themeColor;
 
@@ -649,6 +650,13 @@ body{
       }
       &:nth-child(2){
         background: #000;
+      }
+      b{
+        position: absolute;
+        top:0;
+        right:0;
+        @include triangle(42px,24px,transparent);
+        border-right-color:#000;
       }
       .p2 .content{
         box-sizing: border-box;
